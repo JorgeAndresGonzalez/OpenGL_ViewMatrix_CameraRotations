@@ -1,7 +1,7 @@
-///This program is a simple collection of cubes in screen with color and texture
-///that rotate, using ModernOpenGL
+///This program is a simple example of a Camera system
+///using euler angles, using ModernOpenGL
 ///Author: Jorge Andres Gonzalez Borboa
-///Following: https://learnopengl.com/#!Getting-started/Coordinate-Systems
+///Following: https://learnopengl.com/#!Getting-started/Camera
 
 ///You need GLFW||GLUT||freeGLUT and GLEW||GLAD to compile this example.
 ///Also stb_image.h to do the texture loading:
