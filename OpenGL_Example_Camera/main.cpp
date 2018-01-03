@@ -119,7 +119,7 @@ unsigned int  iTexture2;
 ///Yaw and Pitch angles for the camera
 //angle is 270 because the camera looks at the negative z-axis
 float fYaw = 270.0f;
-float fPitch = 270.0f;
+float fPitch = 0.0f;
 float fRoll = 90.0f;
 bool isCameraRollEnabled = false;
 
@@ -383,18 +383,11 @@ void processInput(GLFWwindow *window)
             newFront.y = 0;
             */
 
-            ///New Camera Front - Only Pitch
-            /*
-            newFront.y = cos(radians(fPitch));
-            newFront.z = sin(radians(fPitch));
-            newFront.x = 0;
-            */
-
             ///New Camera Front - Yaw + Pitch
 
-            newFront.y = cos(radians(fPitch));
-            newFront.z = sin(radians(fYaw)) + sin(radians(fPitch));
-            newFront.x = cos(radians(fYaw));
+            newFront.y = sin(radians(fPitch));
+            newFront.z = sin(radians(fYaw)) * cos(radians(fPitch));
+            newFront.x = cos(radians(fYaw)) * cos(radians(fPitch));
 
 
             newFront = normalize(newFront);
