@@ -767,7 +767,8 @@ int main ()
 
     ///Tell the user to use the arrow to move
     cout << "\n-----------------------------------" << endl;
-    cout << "Use the arrows to move the square" << endl;
+    cout << "W-A-S-D to move the camera" << endl;
+    cout << "Arrow Keys to rotate the camera" << endl;
     cout << "-----------------------------------" << endl;
 
     ///This is the render loop *While the window is open*
